@@ -1,0 +1,43 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x64d94d7e7400 .scope module, "tb" "tb" 2 2;
+ .timescale 0 0;
+v0x64d94d80b3b0_0 .var "a", 3 0;
+v0x64d94d80b4a0_0 .var "b", 3 0;
+v0x64d94d80b570_0 .net "equal", 0 0, L_0x64d94d80b670;  1 drivers
+S_0x64d94d7f9fb0 .scope module, "uut" "fourBitEqualityComparator" 2 6, 3 1 0, S_0x64d94d7e7400;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /OUTPUT 1 "equal";
+v0x64d94d7c27b0_0 .net "a", 3 0, v0x64d94d80b3b0_0;  1 drivers
+v0x64d94d7c2ba0_0 .net "b", 3 0, v0x64d94d80b4a0_0;  1 drivers
+v0x64d94d80b290_0 .net "equal", 0 0, L_0x64d94d80b670;  alias, 1 drivers
+L_0x64d94d80b670 .cmp/eq 4, v0x64d94d80b3b0_0, v0x64d94d80b4a0_0;
+    .scope S_0x64d94d7e7400;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "fourBitEqualityComparator.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x64d94d7e7400 {0 0 0};
+    %vpi_call 2 15 "$display", "a    b    | Equal" {0 0 0};
+    %vpi_call 2 16 "$monitor", "%b %b |   %b", v0x64d94d80b3b0_0, v0x64d94d80b4a0_0, v0x64d94d80b570_0 {0 0 0};
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x64d94d80b3b0_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x64d94d80b4a0_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb.v";
+    "./fourBitEqualityComparator.v";
