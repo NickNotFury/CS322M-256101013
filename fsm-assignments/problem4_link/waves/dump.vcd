@@ -1,0 +1,318 @@
+$date
+	Tue Aug 19 20:34:50 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_link_top $end
+$var wire 1 ! done $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 1 $ req $end
+$var wire 8 % last [7:0] $end
+$var wire 1 ! done $end
+$var wire 8 & data [7:0] $end
+$var wire 1 ' ack $end
+$scope module u_master $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 1 ' ack $end
+$var reg 2 ( byte_idx [1:0] $end
+$var reg 8 ) data [7:0] $end
+$var reg 1 ! done $end
+$var reg 8 * next_data [7:0] $end
+$var reg 1 + next_done $end
+$var reg 2 , next_idx [1:0] $end
+$var reg 1 - next_req $end
+$var reg 3 . next_state [2:0] $end
+$var reg 1 $ req $end
+$var reg 3 / state [2:0] $end
+$scope function byte_val $end
+$var reg 2 0 idx [1:0] $end
+$upscope $end
+$upscope $end
+$scope module u_slave $end
+$var wire 1 " clk $end
+$var wire 8 1 data_in [7:0] $end
+$var wire 1 $ req $end
+$var wire 1 # rst $end
+$var reg 1 ' ack $end
+$var reg 8 2 last_byte [7:0] $end
+$var reg 1 3 next_ack $end
+$var reg 8 4 next_last [7:0] $end
+$var reg 2 5 next_state [1:0] $end
+$var reg 2 6 state [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 6
+bx 5
+bx 4
+x3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+x-
+bx ,
+x+
+bx *
+bx )
+bx (
+x'
+bx &
+bx %
+x$
+1#
+0"
+x!
+$end
+#5000
+b0 0
+0+
+1-
+b10100000 *
+b0 ,
+b1 .
+b0 4
+03
+b0 5
+0!
+0$
+b0 &
+b0 )
+b0 1
+b0 (
+b0 /
+b0 %
+b0 2
+0'
+b0 6
+1"
+#10000
+0"
+#15000
+1"
+#20000
+0"
+#25000
+0#
+1"
+#30000
+0"
+#35000
+b1 5
+13
+b10100000 4
+b10 .
+1$
+b10100000 &
+b10100000 )
+b10100000 1
+b1 /
+1"
+#40000
+0"
+#45000
+b11 .
+0-
+b10 5
+b10 /
+b10100000 %
+b10100000 2
+1'
+b1 6
+1"
+#50000
+0"
+#55000
+b0 5
+03
+b10 6
+0$
+b11 /
+1"
+#60000
+0"
+#65000
+b1 .
+1-
+b10100001 *
+b1 0
+b1 ,
+0'
+b0 6
+1"
+#70000
+0"
+#75000
+b1 5
+13
+b10100001 4
+b10 .
+1$
+b10100001 &
+b10100001 )
+b10100001 1
+b1 (
+b1 /
+1"
+#80000
+0"
+#85000
+b11 .
+0-
+b10 5
+b10 /
+b10100001 %
+b10100001 2
+1'
+b1 6
+1"
+#90000
+0"
+#95000
+b0 5
+03
+b10 6
+0$
+b11 /
+1"
+#100000
+0"
+#105000
+b1 .
+1-
+b10100010 *
+b10 0
+b10 ,
+0'
+b0 6
+1"
+#110000
+0"
+#115000
+b1 5
+13
+b10100010 4
+b10 .
+1$
+b10100010 &
+b10100010 )
+b10100010 1
+b10 (
+b1 /
+1"
+#120000
+0"
+#125000
+b11 .
+0-
+b10 5
+b10 /
+b10100010 %
+b10100010 2
+1'
+b1 6
+1"
+#130000
+0"
+#135000
+b0 5
+03
+b10 6
+0$
+b11 /
+1"
+#140000
+0"
+#145000
+b1 .
+1-
+b10100011 *
+b11 0
+b11 ,
+0'
+b0 6
+1"
+#150000
+0"
+#155000
+b1 5
+13
+b10100011 4
+b10 .
+1$
+b10100011 &
+b10100011 )
+b10100011 1
+b11 (
+b1 /
+1"
+#160000
+0"
+#165000
+b11 .
+0-
+b10 5
+b10 /
+b10100011 %
+b10100011 2
+1'
+b1 6
+1"
+#170000
+0"
+#175000
+b0 5
+03
+b10 6
+0$
+b11 /
+1"
+#180000
+0"
+#185000
+b100 .
+1+
+0'
+b0 6
+1"
+#190000
+0"
+#195000
+0+
+1!
+b100 /
+1"
+#200000
+0"
+#205000
+0!
+1"
+#210000
+0"
+#215000
+1"
+#220000
+0"
+#225000
+1"
+#230000
+0"
+#235000
+1"
+#240000
+0"
+#245000
+1"
