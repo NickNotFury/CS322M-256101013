@@ -1,0 +1,64 @@
+06400613  // addi x12, x0, 100
+00000e13  // addi x28, x0, 0
+f0f0a5a5  // li x1, 0xf0f0a5a5 (lui)
+0000a093  // li x1, 0xf0f0a5a5 (addi)
+0f0fffff  // li x2, 0x0f0fffff (lui)
+0000a113  // li x2, 0x0f0fffff (addi)
+0020818b  // andn x3, x1, x2
+ffff1421  // xori x4, x2, -1
+0040f233  // and x4, x1, x4
+404182b3  // sub x5, x3, x4
+005e0e33  // add x28, x28, x5
+f0f0a5a5  // li x1, 0xf0f0a5a5 (orn test, lui)
+0000a093  // li x1, 0xf0f0a5a5 (addi)
+0f0fffff  // li x2, 0x0f0fffff (orn test, lui)
+0000a113  // li x2, 0x0f0fffff (addi)
+002081cb  // orn x3, x1, x2
+ffff1421  // xori x4, x2, -1
+00c0f233  // or x4, x1, x4
+404182b3  // sub x5, x3, x4
+005e0e33  // add x28, x28, x5
+f0f0a5a5  // li x1, 0xf0f0a5a5 (xnor test, lui)
+0000a093  // li x1, 0xf0f0a5a5 (addi)
+0f0fffff  // li x2, 0x0f0fffff (xnor test, lui)
+0000a113  // li x2, 0x0f0fffff (addi)
+0020820b  // xnor x3, x1, x2
+0040f233  // xor x4, x1, x2
+ffff1421  // xori x4, x4, -1
+404182b3  // sub x5, x3, x4
+005e0e33  // add x28, x28, x5
+fffffffe  // li x1, 0xfffffffe (minu test, lui)
+0000a093  // li x1, 0xfffffffe (addi)
+00000093  // li x2, 1
+0220a18b  // minu x3, x1, x2
+00000113  // li x4, 1
+404182b3  // sub x5, x3, x4
+005e0e33  // add x28, x28, x5
+ffffff80  // li x1, 0xffffff80 (abs test, lui)
+0000a093  // li x1, 0xffffff80 (addi)
+0600818b  // abs x3, x1
+00008093  // li x4, 0x80
+404182b3  // sub x5, x3, x4
+005e0e33  // add x28, x28, x5
+80000000  // li x1, 0x80000000 (abs int_min test, lui)
+0000a093  // li x1, 0x80000000 (addi)
+0600818b  // abs x3, x1
+80000000  // li x4, 0x80000000
+0000a213  // li x4, 0x80000000 (addi)
+404182b3  // sub x5, x3, x4
+005e0e33  // add x28, x28, x5
+12345678  // li x1, 0x12345678 (rol test, lui)
+0000a093  // li x1, 0x12345678 (addi)
+00000113  // li x2, 0
+0420818b  // rol x3, x1, x2
+404182b3  // sub x5, x3, x1
+005e0e33  // add x28, x28, x5
+12340093  // li x1, 0x1234
+56780013  // li x2, 0x5678
+0020800b  // andn x0, x1, x2
+000e0063  // beq x28, x0, pass
+00062023  // sw x0, 0(x12) (fail)
+0000006f  // j end
+01900713  // li x14, 25
+00e62023  // sw x14, 0(x12) (pass)
+00000073  // ebreak
